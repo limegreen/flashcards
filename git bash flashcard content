@@ -1,0 +1,31 @@
+pwd	print current (working) directory
+clear	clears commands from window
+ls	lists files in directory
+ls -a 	list all files in directory (including hidden)
+ls -l	list files with details
+ls -al	list all with details
+cd 	change to home directory
+cd dirName	change to directory dirName
+cd ..	go up one level
+mkdir dirName	make directory dirName
+touch fileName	make new (empty) file called fileName
+cp fileName dirName	copy fileName to dirName
+rm fileName	delete fileName
+rm -r dirName	delete directory and contents (CANNOT UNDO)
+mv fileName dirName	move fileName to dirName
+mv fileName newName	change fileName to newName
+echo text	prints text to console
+date	prints today's date and time
+	
+git init	initialise a local git repo in the current directory
+git remote add origin https://github.com/username/repo.git	add repo.git to username's remote github
+git clone https://github.com/username/repo.git	pulls github repo.git to local directory
+git add .	adds all new files in working directory to local repo
+git add - u	updates changed or deleted files in working directory to local repo
+git add -A	adds and updates all new, changed and deleted files to local repo
+git commit -m "message"	commits changes to repo with message "message"
+git push	sends local repo to github
+git checkout -b newBranch	makes branch of repo newBranch
+git branch	returns name of current branch
+git checkout master	return to main (master) branch
+pull request	action taken on github website (not git bash) which sends a request to the repot owner to merge your changes to their repo
