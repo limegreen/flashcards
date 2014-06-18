@@ -1,0 +1,35 @@
+file.exists("X")	does file/directory X exist?
+dir.create("X")	create directory named X
+download.file(X, destfile = Y)	download file at URI X to local file named Y
+if(!file.exists("X)) {dir.create("X")}	create directory named X if directory X does not exist
+	
+read.table(X)	read tab-delimited data from file X
+read.csv(X)	read comma-delimited data from file X
+quote = " "	often fixes quote issues in tab or comma delimited files (optional argument)
+na.strings	specifies NA character (eg 999) (optional argument)
+skip = X	skip X number of lines at top of file to be read (optional argument)
+	
+library(xlsx)	library for reading Excel files
+read.xlsx("X", sheetIndex = Y, header = T, colIndex = c(a:k), rowIndex = c(l:n))	read in Sheet Y from Excel file X, columns a through k, rows l through n
+XLConnect	more powerful alternative to xlsx package for reading in Excel files
+	
+library(XML)	package for reading XML files
+xmlTreeParse(URI, useInternal = T)	parse XML at address URI, using internal structure
+xmlRoot(X)	extracts document wrapper from XML file
+xmlObject[[1]][[2]]	access  node from xmlObject, second node of the first node
+xmlSApply(object, xmlValue)	returns value from between the tags of xml object
+htmlTreeParse(URI, useInternal = T)	parse HTML at addres URI, using internal structure
+	
+/node	top level node (Xpath)
+//node	node at any level (Xpath)
+node[@attr-name]	node with attribute name (Xpath)
+node[@attr-name = 'bob']	node with attributed name equal to bob (Xpath)
+xpathSApply(object, "//name", xmlValue)	returns values of element "name" from object 
+	
+library(jsonlite)	packing for reading json
+fromJSON("URI")	reads data in neatly (can have dateframes nested within dataframes)
+	
+library(data.table)	package that uses C++ for speedy handling of big files
+DT <- fread("filename")	fast-reads  filename into data.table format 
+DT[,w:=z^2]	adds new variable w, which is the square of variable z, to DT
+setkey(DT, x)	sets x as key variable in DT
